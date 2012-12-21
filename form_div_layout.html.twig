@@ -463,6 +463,8 @@ placed inside the label. See checkbox_label block.
     {% set child_vars = {} %}
     {% if form_type is defined %}
         {% set child_vars = child_vars|merge({'form_type': form_type}) %}
+    {% else %}
+        {% set child_vars = child_vars|merge({'form_type': 'horizontal'}) %}
     {% endif %}
 
     {% for child in form %}
